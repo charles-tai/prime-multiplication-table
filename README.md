@@ -6,7 +6,7 @@ Prints a multiplication table of the first n prime numbers
 
 Run `npm install` to install dependencies.
 
-_ Uses lodash for utils and table-text to generate a formatted table from a matrix_  
+*Uses lodash for utils and table-text to generate a formatted table from a matrix*  
 
 ### How to use
 
@@ -16,7 +16,7 @@ To print a multiplication table of the first n numbers:
 
 #### Example:
 ```
-npm run print-prime-table
+npm run print-prime-table 10
 
 First 10 Primes Multiplication Table:
 
