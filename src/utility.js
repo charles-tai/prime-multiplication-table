@@ -14,17 +14,17 @@ function generateMultiplyTable (array) {
 }
 
 function isPrime (num) {
-  var factor = 2;
+  var potentialFactor = 2;
   if (num == 2) return true;
   var squareRootOfNum = Math.sqrt(num);
   // If num isn't a prime, one of it's factors
   // must be less than or equal to the square root of num.
-  // Check if there are any factors less than the square root of num:
-  while (factor <= squareRootOfNum) {
-    if (num % factor === 0) {
+  while (potentialFactor <= squareRootOfNum) {
+    // Check if num has any factors
+    if (num % potentialFactor === 0) {
       return false;
     }
-    factor++;
+    potentialFactor++;
   }
   return true;
 }
