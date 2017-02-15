@@ -1,14 +1,16 @@
 {
   "name": "funding-circle",
   "version": "1.0.0",
-  "description": "## Instructions",
+  "description": "First N Primes Multiplication Table",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "print-prime-table": "node ./src/main.js",
+    "tests": "node ./tests/tests.js"
   },
-  "author": "",
+  "author": "Charles Tai",
   "license": "ISC",
   "dependencies": {
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.4",
+    "text-table": "^0.2.0"
   }
 }

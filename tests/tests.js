@@ -1,5 +1,5 @@
 var _ = require('lodash');
-var util = require('./utility.js');
+var util = require('../src/utility.js');
 // Testing
 
 function runTests() {
@@ -48,16 +48,16 @@ function runTests() {
 function generateTestCases() {
   var tests = [
     {
-      name: 'generateListOfPrimes',
+      name: 'generateNPrimes',
       tests: [
         {
           name: 'should return empty array if n is less than 2',
-          output: util.generateListOfPrimes(0),
+          output: util.generateNPrimes(0),
           expected: []
         },
         {
           name: 'should generate list of primes',
-          output: util.generateListOfPrimes(10),
+          output: util.generateNPrimes(10),
           expected: [ 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 ]
         }
       ]
@@ -68,13 +68,13 @@ function generateTestCases() {
         {
           name: 'should return null if passed empty array',
           output: util.generateMultiplyTable([]),
-          expected: null
+          expected: []
         },
         {
           name: 'should generate multiply table',
           output: util.generateMultiplyTable([1,2,3,4,5]),
           expected: [
-            [ null, 1, 2, 3, 4, 5 ],
+            [ 'P', 1, 2, 3, 4, 5 ],
             [ 1, 1, 2, 3, 4, 5 ],
             [ 2, 2, 4, 6, 8, 10 ],
             [ 3, 3, 6, 9, 12, 15 ],
@@ -90,13 +90,13 @@ function generateTestCases() {
         {
           name: 'should return null if n is less than 1',
           output: util.generatePrimeMultiplyTable(0),
-          expected: null
+          expected: []
         },
         {
           name: 'should generate multiply table of 10 prime numbers',
           output: util.generatePrimeMultiplyTable(10),
           expected: [
-            [ null, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 ],
+            ['P', 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 ],
             [ 2, 4, 6, 10, 14, 22, 26, 34, 38, 46, 58 ],
             [ 3, 6, 9, 15, 21, 33, 39, 51, 57, 69, 87 ],
             [ 5, 10, 15, 25, 35, 55, 65, 85, 95, 115, 145 ],
